@@ -15,6 +15,6 @@ set PATH=^
 %PYTHON_DIR%\Scripts;^
 %PREFIX%\pixi-x86_64-pc-windows-msvc;
 
-python main.py
+mojo main.mojo
 
 pause
