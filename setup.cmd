@@ -3,8 +3,8 @@
 
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 
-set PREFIX=D:\Softwares
-@REM set PREFIX=%DOWNLOADS_DIR%
+@REM set PREFIX=D:\Softwares
+set PREFIX=%DOWNLOADS_DIR%
 
 
 set SEVENZIP=C:\"Program Files"\7-Zip\7z.exe
@@ -34,3 +34,6 @@ del PortableGit-2.42.0.2-64-bit.7z.exe
 if exist %GIT_EXE% (
     echo git %GIT_EXE% found
 )
+
+
+@REM https://github.com/prefix-dev/pixi/releases/download/v0.68.1/pixi-x86_64-pc-windows-msvc.zip
