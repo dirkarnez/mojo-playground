@@ -35,5 +35,11 @@ if exist %GIT_EXE% (
     echo git %GIT_EXE% found
 )
 
-
-@REM https://github.com/prefix-dev/pixi/releases/download/v0.68.1/pixi-x86_64-pc-windows-msvc.zip
+set PIXI_DIR=%PREFIX%\pixi-x86_64-pc-windows-msvc
+set PIXI_EXE=%PIXI_DIR%\pixi.exe
+if not exist %PIXI_EXE% (
+cd /d "%TEMP%" &&^
+%SystemRoot%\System32\curl.exe "https://github.com/prefix-dev/pixi/releases/download/v0.68.1/pixi-x86_64-pc-windows-msvc.zip" -L -O  &&^
+%SEVENZIP% x pixi-x86_64-pc-windows-msvc.zip -o"%PIXI_DIR%"  &&^
+del pixi-x86_64-pc-windows-msvc.zip
+)
